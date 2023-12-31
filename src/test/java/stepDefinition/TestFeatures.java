@@ -3,6 +3,8 @@ package stepDefinition;
 import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
 import cucumber.api.java8.En;
@@ -16,6 +18,12 @@ public class TestFeatures implements En {
 			switch (browserName) {
 				case "Safari":
 					this.driver = new SafariDriver();
+					break;
+				case "Edge":
+					this.driver = new EdgeDriver();
+					break;
+				case "Chrome":
+					this.driver = new ChromeDriver();
 					break;
 				default:
 					// do nothing

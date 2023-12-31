@@ -6,7 +6,7 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 @CucumberOptions(features = "src/test/resources", glue = { "stepDefinition" }, tags = {
-		"@testGoogle" }, monochrome = true, plugin = {
+		"@tag1" }, monochrome = true, plugin = {
 				"com.report.CucumberExtent:target/cucumber-extent-reports/report.html" })
 
 public class TestNGRunner extends AbstractTestNGCucumberTests {
@@ -20,8 +20,8 @@ public class TestNGRunner extends AbstractTestNGCucumberTests {
 	 */
 	@BeforeClass
 	public void beforeMethod() {
-		CucumberExtentOptions.getInstance().setDocumentTitle("Gaurav document title");
+		CucumberExtentOptions.getInstance().setDocumentTitle("Abhishek document title");
 		// CucumberExtentOptions.getInstance().setReportLevel("Feature");
-		CucumberExtentOptions.getInstance().setReportName("Gaurav report name");
+		CucumberExtentOptions.getInstance().setReportName("Abhishek report name");
 	}
 }
